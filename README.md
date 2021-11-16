@@ -12,8 +12,8 @@ See the Main notebook and the results directory to consult the results.
 
 Based on a config file... 
 
-![config](kops_config_screenshot.png)
+![config](results/kops_config_screenshot.png)
 
 ... we download the project, statically analyse the code to mine the dependencies between FT, and extract a feature toggle model.
 
-![ftm](kops_short_ftm.png)
+![ftm](results/kops_short_ftm.png)
