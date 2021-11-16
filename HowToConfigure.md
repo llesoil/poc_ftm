@@ -7,9 +7,13 @@ For now, it only works with .go projects.
 ## Requirements
 
 You'll need jupyter notebook and a python environment. 
+
 The easy way to install these is to download Anaconda here : https://docs.conda.io/en/latest/
+
 Install tree-sitter with this command line in a cell `!pip3 install tree_sitter`
+
 Install GraphViz with `conda install -c anaconda graphviz`
+
 (Optional) Install treelib with `conda install -c conda-forge treelib`
 
 ## How does it work?
@@ -29,7 +33,8 @@ We list hereafter the list of arguments you **must** add in the configuration fi
 - `feature_structure` the way the program expresses feature toggles. It acts as a filter to avoid keeping false positives. For instance, in the case of Juju, the program uses `features.TheNameOfTheFeatureToggle.enabled()` to define a feature toggle, so we stick to `features.`. Leave it empty if you do not want to filter the statements.
 
 For several projects (e.g. Kops & Juju) we automatically extract the names of the feature toggles with a regular expression, based on a file listing all the feature toggles. If you want to do so, just add : 
--`reg_exp` the format of your regular expression
+
+- `reg_exp` the format of your regular expression
 - `ft_file` the path of the file containing all the feature toggle names (aka keywords to search)
 If it is too complicated to automate the process, you can just tell the program what keywords it has to search for, with:
 - `keywords` a table of string, the names of the feature toggles
