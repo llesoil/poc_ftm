@@ -1,0 +1,23 @@
+!features.enabled(features.allowv1registration)
+features.enabled(features.restrictrsakeysizes)
+alg == x509.ecdsa && !features.enabled(features.ecdsaforall) && ca.ecdsaallowlist != nil && !ca.ecdsaallowlist.permitted(issuereq.registrationid)
+features.enabled(features.fasternewordersratelimit)
+features.enabled(features.fasternewordersratelimit)
+features.enabled(features.fasternewordersratelimit)
+features.enabled(features.storerevokerinfo) && req.revokedby != 0
+features.enabled(features.v1disablenewvalidations)
+features.enabled(features.storerevokerinfo) && revokedby != 0
+features.enabled(features.serverenewalinfo)
+features.enabled(features.serverenewalinfo)
+features.enabled(features.mandatorypostasget) && request.method != http.methodpost && !requiredstale(request, logevent)
+features.enabled(features.mandatorypostasget) && request.method != http.methodpost && !requiredstale(request, logevent)
+features.enabled(features.mandatorypostasget) && request.method != http.methodpost && !requiredstale(request, logevent)
+features.enabled(features.mandatorypostasget) && request.method != http.methodpost && !requiredstale(request, logevent)
+!features.enabled(features.serverenewalinfo)
+features.enabled(features.caaaccounturi) && len(accounturiprefixes) == 0
+!features.enabled(features.multivafullresults)
+!features.enabled(features.enforcemultiva) && features.enabled(features.multivafullresults)
+!features.enabled(features.enforcemultiva) && features.enabled(features.multivafullresults)
+features.enabled(features.enforcemultiva)
+features.enabled(features.caaaccounturi)
+features.enabled(features.caavalidationmethods)

@@ -1,0 +1,6 @@
+{"directory": "./kops/",
+ "ft_file": "./kops/pkg/featureflag/featureflag.go",
+ "reg_exp": "[N|n]ew.*,*Bool*",
+ "sep_reg_exp" : "\"",
+ "feature_structure": "featureflag.",
+ "url" : "https://github.com/kubernetes/kops"}

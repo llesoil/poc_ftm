@@ -1,0 +1,13 @@
+!e.getfeatureflags().admin(e.getuid())
+!ok
+err != nil
+prevstate.isimplicit()
+err != nil
+err != nil
+mctx.g().getproofservices().getservicetype(mctx.ctx(), invitetypestr) != nil
+isdev && invitetypestr == "rooter"
+cc.g().env.getfeatureflags().hasfeature(libkb.featurejourneycard)
+e.test.environmentfeatureflags != nil
+e.getapptype() == mobileapptype && !e.getfeatureflags().admin(e.getuid())
+!skipfeatureflag
+mctx.g().featureflags.enabled(mctx, experimentalgenericproofs)

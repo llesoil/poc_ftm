@@ -1,0 +1,31 @@
+cmderr != nil && featureflag.enabled(feature.developermode)
+err != nil && featureflag.enabled(feature.developermode)
+err != nil && featureflag.enabled(feature.developermode)
+err != nil && featureflag.enabled(feature.developermode)
+featureflag.enabled(feature.developermode)
+featureflag.enabled(feature.strictmigration)
+featureflag.enabled(feature.developermode)
+featureflag.enabled(feature.branches) || featureflag.enabled(feature.generations)
+featureflag.enabled(feature.branches) || featureflag.enabled(feature.generations)
+featureflag.enabled(feature.branches) || featureflag.enabled(feature.generations)
+featureflag.enabled(feature.branches) || featureflag.enabled(feature.generations)
+featureflag.enabled(feature.legacyupstart)
+featureflag.enabled(feature.legacyupstart)
+featureflag.enabled(feature.logerrorstack)
+featureflag.enabled(feature.secrets)
+featureflag.enabled(feature.developermode)
+featureflag.enabled(feature.branches) || featureflag.enabled(feature.generations)
+featureflag.enabled(feature.branches) || featureflag.enabled(feature.generations)
+featureflag.enabled(feature.branches) || featureflag.enabled(feature.generations)
+featureflag.enabled(feature.branches) || featureflag.enabled(feature.generations)
+!featureflag.enabled(feature.branches) && !featureflag.enabled(feature.generations) && c.branchname == ""
+!featureflag.enabled(feature.branches) && !featureflag.enabled(feature.generations) && c.branchname == ""
+(featureflag.enabled(feature.branches) || featureflag.enabled(feature.generations)) && err == nil
+(featureflag.enabled(feature.branches) || featureflag.enabled(feature.generations)) && err == nil
+featureflag.enabled(feature.branches) || featureflag.enabled(feature.generations)
+featureflag.enabled(feature.branches) || featureflag.enabled(feature.generations)
+!featureflag.enabled(feature.developermode) && streamsversions.size() > 0
+featureflag.enabled(feature.branches) || featureflag.enabled(feature.generations)
+featureflag.enabled(feature.branches) || featureflag.enabled(feature.generations)
+featureflag.enabled(feature.developermode)
+featureflag.enabled(feature.secrets)

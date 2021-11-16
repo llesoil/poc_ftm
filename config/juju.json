@@ -1,0 +1,6 @@
+{"directory": "./juju/",
+ "ft_file": "./juju/feature/flags.go",
+ "reg_exp": "const (.*) =",
+ "feature_structure": "featureflag.",
+ "url" : "https://github.com/juju/juju"}
+

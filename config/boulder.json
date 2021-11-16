@@ -1,0 +1,8 @@
+{"directory": "./boulder/",
+ "keywords": ["CAAValidationMethods", "CAAAccountURI", "EnforceMultiVA", "MultiVAFullResults", 
+            "MandatoryPOSTAsGET", "AllowV1Registration", "V1DisableNewValidations", "StoreRevokerInfo", 
+            "RestrictRSAKeySizes", "FasterNewOrdersRateLimit", "ECDSAForAll", "ServeRenewalInfo"],
+ "feature_structure": "features.",
+ "url" : "https://github.com/letsencrypt/boulder"}
+
+
