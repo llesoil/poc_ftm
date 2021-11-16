@@ -1,1 +1,1 @@
-{"actionsv2": 1, "asynchronouscharmdownloads": 0, "branches": 8, "charmassumes": 0, "developermode": 9, "generations": 8, "legacyupstart": 9, "logerrorstack": 1, "raftapileases": 0, "raftbatchfsm": 0, "rawk8sspec": 0, "secrets": 37, "strictmigration": 1}
+{"actionsv2": 1, "asynchronouscharmdownloads": 7, "branches": 17, "charmassumes": 7, "developermode": 12, "generations": 9, "legacyupstart": 3, "logerrorstack": 2, "raftapileases": 1, "raftbatchfsm": 1, "rawk8sspec": 5, "secrets": 5, "strictmigration": 2}

@@ -1,3 +1,5 @@
+!pm.featuregate.enabled(features.csimigration)
+f.enabled(pluginmigration) && !f.enabled(features.csimigration)
 spec.volume != nil && spec.volume.csi != nil && utilfeature.defaultfeaturegate.enabled(features.csiinlinevolume)
 utilfeature.defaultfeaturegate.enabled(features.readwriteoncepod) &&actualstateofworld.isvolumemountedelsewhere(volumetomount.volumename, volumetomount.podname) &&// because we do not know what access mode the pod intends to use if there are multiple.len(volumetomount.volumespec.persistentvolume.spec.accessmodes) == 1 &&v1helper.containsaccessmode(volumetomount.volumespec.persistentvolume.spec.accessmodes, v1.readwriteoncepod)
 utilfeature.defaultfeaturegate.enabled(features.readwriteoncepod) &&actualstateofworld.isvolumemountedelsewhere(volumetomount.volumename, volumetomount.podname) &&// because we do not know what access mode the pod intends to use if there are multiple.len(volumetomount.volumespec.persistentvolume.spec.accessmodes) == 1 &&v1helper.containsaccessmode(volumetomount.volumespec.persistentvolume.spec.accessmodes, v1.readwriteoncepod)
@@ -111,6 +113,16 @@ len(thresholds) == 0 && !utilfeature.defaultfeaturegate.enabled(features.localst
 utilfeature.defaultfeaturegate.enabled(features.localstoragecapacityisolation)
 !utilfeature.defaultfeaturegate.enabled(kubefeatures.disableacceleratorusagemetrics)
 usinglegacystats || utilfeature.defaultfeaturegate.enabled(kubefeatures.localstoragecapacityisolation)
+!localfeaturegate.enabled(features.cpucfsquotaperiod) && kc.cpucfsquotaperiod != defaultcfsquota
+localfeaturegate.enabled(features.cpucfsquotaperiod) && utilvalidation.isinrange(int(kc.cpucfsquotaperiod.duration), int(1*time.microsecond), int(time.second)) != nil
+kc.servertlsbootstrap && !localfeaturegate.enabled(features.rotatekubeletservercertificate)
+kc.topologymanagerpolicy != kubeletconfig.nonetopologymanagerpolicy && !localfeaturegate.enabled(features.topologymanager)
+kc.topologymanagerscope != kubeletconfig.containertopologymanagerscope && !localfeaturegate.enabled(features.topologymanager)
+localfeaturegate.enabled(features.gracefulnodeshutdown)
+(kc.shutdowngraceperiod.duration > 0 || kc.shutdowngraceperiodcriticalpods.duration > 0) && !localfeaturegate.enabled(features.gracefulnodeshutdown)
+localfeaturegate.enabled(features.nodeswap)
+!localfeaturegate.enabled(features.nodeswap) && kc.memoryswap != (kubeletconfig.memoryswapconfiguration{})
+localfeaturegate.enabled(features.memoryqos) && kc.memorythrottlingfactor == nil
 !utilfeature.defaultfeaturegate.enabled(kubefeatures.kubeletpodresourcesgetallocatable)
 !utilfeature.defaultfeaturegate.enabled(kubefeatures.kubeletpodresourcesgetallocatable)
 utilfeature.defaultfeaturegate.enabled(kubefeatures.memoryqos) &&libcontainercgroups.iscgroup2unifiedmode()
@@ -238,11 +250,12 @@ utilfeature.defaultfeaturegate.enabled(features.csimigration)
 utilfeature.defaultfeaturegate.enabled(features.expandpersistentvolumes)
 utilfeature.defaultfeaturegate.enabled(features.expandpersistentvolumes)
 utilfeature.defaultfeaturegate.enabled(features.csistoragecapacity)
+r.features.enabled(features.expandpersistentvolumes)
 utilfeature.defaultfeaturegate.enabled(features.dynamickubeletconfig)
 utilfeature.defaultfeaturegate.enabled(features.csimigration)
 utilfeature.defaultfeaturegate.enabled(features.csistoragecapacity)
 dinfo.capabilities[storageframework.capvolumemountgroup] &&utilfeature.defaultfeaturegate.enabled(features.delegatefsgrouptocsidriver) &&policy == v1.fsgroupchangeonrootmismatch
-!utilfeature.defaultfeaturegate.enabled(featureephemeralcontainers)
+!framework.testcontext.featuregates[string(features.windowshostprocesscontainers)]
 utilfeature.defaultfeaturegate.enabled(features.dynamickubeletconfig)
 utilfeature.defaultfeaturegate.enabled(features.dynamickubeletconfig)
 utilfeature.defaultfeaturegate.enabled(features.topologyawarehints)
