@@ -1,0 +1,1 @@
+* features.Enabled(features.EnforceMultiVA) -> !features.Enabled(features.EnforceMultiVA) && features.Enabled(features.MultiVAFullResults) -> remoteResults != nil -> prob != nil : 1

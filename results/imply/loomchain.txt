@@ -1,0 +1,8 @@
+* ctx.FeatureEnabled(features.DPOSVersion2_1, false) -> statistic.WhitelistAmount != nil && !common.IsZero(statistic.WhitelistAmount.Value) : 1
+* ctx.FeatureEnabled(features.DPOSVersion3_4, false) -> cand.State != REGISTERED -> cand == nil : 1
+* ctx.FeatureEnabled(features.DPOSVersion3_3, false) -> statistic == nil : 1
+* !ctx.FeatureEnabled(features.DPOSVersion3_1, false) -> common.IsZero(statistic.SlashPercentage.Value) -> statistic == nil : 1
+* !lvm.state.FeatureEnabled(features.EvmTxReceiptsVersion3_4, false) -> lvm.receiptHandler != nil : 4
+* lvm.state.FeatureEnabled(features.EvmTxReceiptsVersion3_3, false) -> !lvm.state.FeatureEnabled(features.EvmTxReceiptsVersion3_4, false) -> lvm.receiptHandler != nil : 4
+* lvm.state.FeatureEnabled(features.EvmTxReceiptsVersion3_2, false) -> lvm.state.FeatureEnabled(features.EvmTxReceiptsVersion3_3, false) -> !lvm.state.FeatureEnabled(features.EvmTxReceiptsVersion3_4, false) -> lvm.receiptHandler != nil : 2
+* lvm.state.FeatureEnabled(features.EvmTxReceiptsVersion3_1, false) -> lvm.state.FeatureEnabled(features.EvmTxReceiptsVersion3_3, false) -> !lvm.state.FeatureEnabled(features.EvmTxReceiptsVersion3_4, false) -> lvm.receiptHandler != nil : 2
