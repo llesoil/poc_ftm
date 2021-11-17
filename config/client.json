@@ -1,6 +1,6 @@
 {"directory": "./client/",
- "keywords": ["connectThrashCheck", "foldersInProfileTab", "inviteFriends", "tabletSupport", 
+ "keywords": ["admin", "connectThrashCheck", "foldersInProfileTab", "inviteFriends", "tabletSupport", 
             "moveOrCopy", "newTeamBuildingForChatAllowMakeTeam", "teamInvites", "teamsRedesign", 
-            "webOfTrust", "whyDidYouRender", "FeatureFlags"],
- "feature_structure": "",
+            "webOfTrust", "whyDidYouRender"],
+ "feature_structure": "flags.",
  "url" : "https://github.com/keybase/client/"}

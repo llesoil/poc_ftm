@@ -1,7 +1,9 @@
 {"directory": "./boulder/",
- "keywords": ["CAAValidationMethods", "CAAAccountURI", "EnforceMultiVA", "MultiVAFullResults", 
-            "MandatoryPOSTAsGET", "AllowV1Registration", "V1DisableNewValidations", "StoreRevokerInfo", 
-            "RestrictRSAKeySizes", "FasterNewOrdersRateLimit", "ECDSAForAll", "ServeRenewalInfo"],
+ "ft_file": "./boulder/features/features.go",
+ "keywords": ["PrecertificateRevocation", "StripDefaultSchemePort", "NonCFSSLSigner", "StoreIssuerInfo", "StreamlineOrderAndAuthzs",
+"CAAValidationMethods", "CAAAccountURI", "EnforceMultiVA", "MultiVAFullResults", "MandatoryPOSTAsGET",
+"AllowV1Registration", "V1DisableNewValidations", "StoreRevokerInfo", "RestrictRSAKeySizes", "FasterNewOrdersRateLimit",
+"ECDSAForAll", "ServeRenewalInfo"],
  "feature_structure": "features.",
  "url" : "https://github.com/letsencrypt/boulder"}
 
