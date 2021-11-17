@@ -264,6 +264,16 @@ class File:
         return self._data
 
 
+    def get_filename(self):
+        """Return filename
+
+        :return: filename
+        :rtype: String
+        """
+
+        return self._file
+
+
 class Project:
     """Class of a Project. A project has a configuration file and is composed of files.
 
