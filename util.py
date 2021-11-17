@@ -5,9 +5,8 @@ import os
 import json
 import re
 
-
 CONFIGURATION_FILE_PATH = "config"
-
+IMPLICATION_RESULTS = "results/imply"
 
 def read_file(filename):
     """Read the file and return its content.
