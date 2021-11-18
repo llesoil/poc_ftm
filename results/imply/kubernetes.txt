@@ -12,7 +12,6 @@
 * !utilfeature.DefaultFeatureGate.Enabled(features.LogarithmicScaleDown) -> !readyTime1.Equal(readyTime2) -> podutil.IsPodReady(s.Pods[i]) && podutil.IsPodReady(s.Pods[j]) : 1
 * !utilfeature.DefaultFeatureGate.Enabled(features.LogarithmicScaleDown) -> !s.Pods[i].CreationTimestamp.Equal(&s.Pods[j].CreationTimestamp) : 1
 * utilfeature.DefaultFeatureGate.Enabled(features.StatefulSetMinReadySeconds) -> isRunningAndReady(pods[i]) : 1
-* utilfeature.DefaultFeatureGate.Enabled(features.CSIInlineVolume) -> len(pod.Spec.Volumes) > 0 : 1
 * utilfeature.DefaultFeatureGate.Enabled(features.TopologyAwareHints) -> !remove : 1
 * utilfeature.DefaultFeatureGate.Enabled(features.ProxyTerminatingEndpoints) -> onlyNodeLocalEndpoints : 1
 * !utilfeature.DefaultFeatureGate.Enabled(kubefeatures.WinOverlay) -> isOverlay(hnsNetworkInfo) : 1

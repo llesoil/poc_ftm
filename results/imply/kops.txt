@@ -1,6 +1,6 @@
 * featureflag.SpotinstHybrid.Enabled() -> featureflag.Spotinst.Enabled() : 2
 * featureflag.TerraformManagedFiles.Enabled() -> featureflag.TerraformJSON.Enabled() : 1
-* featureflag.Spotinst.Enabled() -> t.Cloud.ProviderID() == kops.CloudProviderAWS -> t.Cloud.ProviderID() == kops.CloudProviderGCE : 1
+* featureflag.Spotinst.Enabled() -> t.Cloud.ProviderID() == kops.CloudProviderAWS : 1
 * featureflag.VPCSkipEnableDNSSupport.Enabled() -> changes != nil && changes.EnableDNSSupport != nil -> shared : 1
 * featureflag.Spotinst.Enabled() -> raw == nil : 1
 * featureflag.SpotinstHybrid.Enabled() -> c.spotinst != nil : 6
