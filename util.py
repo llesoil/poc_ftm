@@ -200,6 +200,9 @@ class IFVisitor(ASTNodeVisitor):
 
         nnode = cursor.node.children[1]
         txt = self._source[nnode.start_byte:nnode.end_byte].decode('utf8')
+        txt_ = self._source[nnode.start_byte-10:nnode.end_byte].decode('utf8')
+        if "else if" in txt_ and self._stack:
+            self._stack.pop()
         self._stack.append(txt)
         if self._feature_toggle_token in txt:
             for kw in self._kw_list:
