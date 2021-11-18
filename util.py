@@ -5,9 +5,8 @@ import os
 import json
 import re
 
-
 CONFIGURATION_FILE_PATH = "config"
-
+IMPLICATION_RESULTS = "results/imply"
 
 def read_file(filename):
     """Read the file and return its content.
@@ -265,6 +264,16 @@ class File:
         return self._data
 
 
+    def get_filename(self):
+        """Return filename
+
+        :return: filename
+        :rtype: String
+        """
+
+        return self._file
+
+
 class Project:
     """Class of a Project. A project has a configuration file and is composed of files.
 
@@ -368,3 +377,73 @@ class Project:
         """
 
         return self._config_file.get_keywords()
+
+
+    def export(self):
+        """Export data in the respective folders in json format.
+        """
+
+        pass
+
+
+    def print(self):
+        """Prints the summary of recolted data per FT"""
+
+        print("Name,VAR,AND,OR,IMPL")
+        for kw in self.get_keywords():
+            aand = 0
+            oor = 0
+            impl = 0
+            alone = 0
+            for ff in self._files:
+                for elt in self._files[ff].get_data()["expression"]:
+                    if kw in elt:
+                        if "&&" in elt:
+                            aand += 1
+                        elif "||" in elt:
+                            oor += 1
+                for elt in self._files[ff].get_data()["imply"]:
+                    for ft in elt:
+                        if kw in ft:
+                            impl += 1
+                for elt in self._files[ff].get_data()["var"]:
+                    if kw in elt:
+                        alone += 1
+            print(f"{kw},{alone},{aand},{oor},{impl}")
+
+
+    def imply_res(self):
+        """Dumps data on nested if_statements with feature toggles (implications)"""
+
+        def _imply_format(imply_list):
+            return " -> ".join(imply_list[::-1])
+
+        imply_count = dict()
+
+        for src_file in self._files:
+            for val in self._files[src_file].get_data()["imply"]:
+                # all_in = []
+                # for case in val:
+                #     if self.get_feature_toggle_token() in case:
+                #         all_in.append(True)
+                #     else:
+                #         all_in.append(False)
+                # if all(all_in):
+                #     if _imply_format(val) in imply_count:
+                #         imply_count[_imply_format(val)] += 1
+                #     else:
+                #         imply_count[_imply_format(val)] = 1
+                if _imply_format(val) in imply_count:
+                    imply_count[_imply_format(val)] += 1
+                else:
+                    imply_count[_imply_format(val)] = 1
+
+        return imply_count
+
+    def save_imply(self):
+        res = self.imply_res()
+        str_content = ""
+        for k, v in res.items():
+            str_content += f"* {k} : {v}\n"
+        with open(f"{IMPLICATION_RESULTS}/{self.project_name}.txt", 'w') as output:
+            output.write(str_content)
