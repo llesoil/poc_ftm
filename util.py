@@ -206,7 +206,7 @@ class IFVisitor(ASTNodeVisitor):
         self._stack.append(txt)
         if self._feature_toggle_token in txt:
             for kw in self._kw_list:
-                if f"{self._feature_toggle_token}.{kw}" in txt:
+                if f"{self._feature_toggle_token}{kw}" in txt:
                     if nnode.type == "binary_expression":
                         self.res["expression"].append(txt)
                     else:
@@ -308,7 +308,7 @@ class Project:
         :rtype: String
         """
 
-        return f"{self._config_file.get_feature_toggle_token()}.{ft}"
+        return f"{self._config_file.get_feature_toggle_token()}{ft}"
 
 
     def get_files_with_keywords(self):
