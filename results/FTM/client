@@ -1,7 +1,3 @@
 // FTM client
 graph {
-	featureflags [label=featureflags]
-	featureflags -- featureflags [label=4]
-	expr -- expr [label=1 color=blue]
-	expr -- featureflags [label=1 color=blue]
 }

@@ -16,4 +16,4 @@ Based on a config file...
 
 ... we download the project, statically analyse the code to mine the dependencies between FT, and extract a feature toggle model.
 
-![ftm](results/kops_short_ftm.png)
+![ftm](results/FTM_01.png)
