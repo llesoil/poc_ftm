@@ -1,6 +1,7 @@
 {"directory": "./loomchain/",
 "ft_file": "./loomchain/features/features.go",
-"keywords": ["TGCheckTxHashFeature", "TGHotWalletFeature", "TGCheckZeroAmount", "TGFixERC721Feature", "TGBinanceContractMappingFeature",
+"reg_exp": "\n\t([a-zA-Z0-9_]*) =",
+"keywords2": ["TGCheckTxHashFeature", "TGHotWalletFeature", "TGCheckZeroAmount", "TGFixERC721Feature", "TGBinanceContractMappingFeature",
 "TGWithdrawalLimitFeature", "TGVersion1_1", "TGVersion1_2", "TGVersion1_3", "TGVersion1_4", 
 "TGVersion1_5", "TGVersion1_6", "TGVersion1_7", "AddressMapperVersion1_1", "AuthSigTxFeaturePrefix",
 "MultiChainSigTxMiddlewareVersion1_1", "DPOSVersion3Feature", "DPOSVersion3_1", "DPOSVersion3_2", "DPOSVersion3_3",

@@ -1,6 +1,7 @@
 {"directory": "./kubernetes/", 
+"reg_exp" : "= \"([a-zA-Z0-9]*)\"",
 "ft_file":"./kubernetes/pkg/features/kube_features.go",
-"keywords": ["AppArmor", "DynamicKubeletConfig", "ExperimentalHostUserNamespaceDefaultingGate", "DevicePlugins", "HPAScaleToZero",
+"keywords2": ["AppArmor", "DynamicKubeletConfig", "ExperimentalHostUserNamespaceDefaultingGate", "DevicePlugins", "HPAScaleToZero",
 "RotateKubeletServerCertificate", "LocalStorageCapacityIsolation", "ExpandPersistentVolumes", "ExpandInUsePersistentVolumes", "ExpandCSIVolumes",
 "EphemeralContainers", "QOSReserved", "CPUManager", "CPUCFSQuotaPeriod", "TopologyManager", 
 "MemoryManager", "StorageObjectInUseProtection", "VolumeSubpath", "CSIInlineVolume", "CSIStorageCapacity",
@@ -23,5 +24,4 @@
 "MemoryQoS", "CPUManagerPolicyOptions", "ControllerManagerLeaderMigration", "CPUManagerPolicyAlphaOptions", "CPUManagerPolicyBetaOptions",
 "JobMutableNodeSchedulingDirectives", "PodAndContainerStatsFromCRI", "HonorPVReclaimPolicy"], 
 "feature_structure": "features.",
-"ft_file": "./kubernetes/pkg/featureflag/featureflag.go",
 "url": "https://github.com/kubernetes/kubernetes"}

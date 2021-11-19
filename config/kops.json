@@ -1,6 +1,6 @@
 {"directory": "./kops/",
  "ft_file": "./kops/pkg/featureflag/featureflag.go",
- "keywords": ["CacheNodeidentityInfo", "EnableSeparateConfigBase", "ExperimentalClusterDNS", "GoogleCloudBucketACL", "KeepLaunchConfigurations",
+ "keywords2": ["CacheNodeidentityInfo", "EnableSeparateConfigBase", "ExperimentalClusterDNS", "GoogleCloudBucketACL", "KeepLaunchConfigurations",
 "SpecOverrideFlag", "Spotinst", "SpotinstOcean", "SpotinstHybrid", "SpotinstController",
 "VFSVaultSupport", "VPCSkipEnableDNSSupport", "SkipEtcdVersionCheck", "TerraformJSON", "ClusterAddons", 
 "Azure", "KopsControllerStateStore", "APIServerNodes", "UseAddonOperators", "AWSIPv6",

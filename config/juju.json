@@ -1,6 +1,6 @@
 {"directory": "./juju/",
  "ft_file": "./juju/feature/flags.go",
- "keywords": ["LogErrorStack", "LegacyUpstart", "DeveloperMode", "StrictMigration", "Branches", 
+ "keywords2": ["LogErrorStack", "LegacyUpstart", "DeveloperMode", "StrictMigration", "Branches", 
 "Generations", "RawK8sSpec", "ActionsV2", "Secrets", "AsynchronousCharmDownloads",
 "RaftBatchFSM", "RaftAPILeases", "CharmAssumes"],
  "reg_exp": "const (.*) =",

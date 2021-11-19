@@ -1,10 +1,11 @@
 {"directory": "./boulder/",
  "ft_file": "./boulder/features/features.go",
- "keywords": ["PrecertificateRevocation", "StripDefaultSchemePort", "NonCFSSLSigner", "StoreIssuerInfo", "StreamlineOrderAndAuthzs",
+ "keywords2": ["PrecertificateRevocation", "StripDefaultSchemePort", "NonCFSSLSigner", "StoreIssuerInfo", "StreamlineOrderAndAuthzs",
 "CAAValidationMethods", "CAAAccountURI", "EnforceMultiVA", "MultiVAFullResults", "MandatoryPOSTAsGET",
 "AllowV1Registration", "V1DisableNewValidations", "StoreRevokerInfo", "RestrictRSAKeySizes", "FasterNewOrdersRateLimit",
 "ECDSAForAll", "ServeRenewalInfo"],
  "feature_structure": "features.",
+ "reg_exp": "\t([a-zA-Z]*)\n",
  "url" : "https://github.com/letsencrypt/boulder"}
 
 
