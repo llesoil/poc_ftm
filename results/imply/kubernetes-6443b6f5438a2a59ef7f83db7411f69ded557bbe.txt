@@ -1,0 +1,13 @@
+* r.features.Enabled(features.ExpandPersistentVolumes) -> attrs.IsResourceRequest() : 1
+* r.features.Enabled(features.CSIPersistentVolume) -> attrs.IsResourceRequest() : 1
+* !utilfeature.DefaultFeatureGate.Enabled(features.LocalStorageCapacityIsolation) -> source.EmptyDir != nil : 1
+* !utilfeature.DefaultFeatureGate.Enabled(features.PersistentLocalVolumes) -> numVolumes > 0 -> pv.Spec.Local != nil : 1
+* !utilfeature.DefaultFeatureGate.Enabled(features.CustomPodDNS) -> dnsConfig != nil : 1
+* !utilfeature.DefaultFeatureGate.Enabled(features.PodPriority) -> len(spec.PriorityClassName) > 0 : 1
+* !utilfeature.DefaultFeatureGate.Enabled(features.HugePages) -> helper.IsHugePageResourceName(resourceName) : 1
+* utilfeature.DefaultFeatureGate.Enabled(features.VolumeScheduling) -> old.Spec.VolumeName != new.Spec.VolumeName : 1
+* utilfeature.DefaultFeatureGate.Enabled(features.VolumeScheduling) -> pvName == "" -> volume.PersistentVolumeClaim != nil : 1
+* utilfeature.DefaultFeatureGate.Enabled(features.LocalStorageCapacityIsolation) -> err != nil : 1
+* utilfeature.DefaultFeatureGate.Enabled(features.RotateKubeletServerCertificate) -> kubeDeps.Cloud != nil : 1
+* utilfeature.DefaultFeatureGate.Enabled(features.BlockVolume) -> pvcSource :=
+		podVolume.VolumeSource.PersistentVolumeClaim : 1

@@ -1,0 +1,7 @@
+* featureflag.VPCSkipEnableDNSSupport.Enabled() -> changes != nil && changes.EnableDNSSupport != nil -> shared : 1
+* featureflag.Spotinst.Enabled() -> raw == nil : 1
+* !featureflag.ExperimentalClusterDNS.Enabled() -> c.Spec.KubeDNS.ServerIP != "" -> c.Spec.KubeDNS != nil : 1
+* !featureflag.EnableNodeAuthorization.Enabled() -> c.Spec.NodeAuthorization != nil : 1
+* featureflag.SkipEtcdVersionCheck.Enabled() -> !etcdVersionIsSupported(etcdCluster.Version) : 1
+* !featureflag.VSphereCloudProvider.Enabled() -> c.Cloud == "vsphere" -> c.Cloud != "" : 1
+* featureflag.Spotinst.Enabled() -> c.Cloud != "" : 1

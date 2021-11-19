@@ -1,0 +1,1 @@
+* features.Enabled(features.EnforceMultiVA) -> remoteResults != nil : 1

@@ -1,0 +1,15 @@
+* s.featureGate.Enabled(kubefeatures.BoundServiceAccountTokenVolume) -> len(tokenVolumeName) == 0 : 1
+* utilfeature.DefaultFeatureGate.Enabled(features.CSIDriverRegistry) -> utilfeature.DefaultFeatureGate.Enabled(features.CSIPersistentVolume) : 2
+* r.features.Enabled(features.ExpandPersistentVolumes) -> attrs.IsResourceRequest() : 1
+* r.features.Enabled(features.CSIPersistentVolume) -> attrs.IsResourceRequest() : 1
+* r.features.Enabled(features.TokenRequest) -> attrs.IsResourceRequest() : 1
+* r.features.Enabled(features.NodeLease) -> attrs.IsResourceRequest() : 1
+* !utilfeature.DefaultFeatureGate.Enabled(features.CustomPodDNS) -> dnsConfig != nil : 1
+* !utilfeature.DefaultFeatureGate.Enabled(features.HugePages) -> helper.IsHugePageResourceName(resourceName) : 1
+* !utilfeature.DefaultFeatureGate.Enabled(features.VolumeSubpath) -> mount.SubPath != "" : 1
+* utilfeature.DefaultFeatureGate.Enabled(features.VolumeSubpathEnvExpansion) -> mount.SubPath != "" : 2
+* utilfeature.DefaultFeatureGate.Enabled(features.NodeLease) -> kl.kubeClient != nil : 1
+* utilfeature.DefaultFeatureGate.Enabled(features.LocalStorageCapacityIsolation) -> err != nil : 1
+* utilfeature.DefaultFeatureGate.Enabled(features.BlockVolume) -> pvcSource :=
+		podVolume.VolumeSource.PersistentVolumeClaim : 1
+* utilfeature.DefaultFeatureGate.Enabled(features.GCERegionalPersistentDisk) -> zone == "" : 1

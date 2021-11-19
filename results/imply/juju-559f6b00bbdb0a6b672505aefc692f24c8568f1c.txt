@@ -1,0 +1,2 @@
+* featureflag.Enabled(feature.DeveloperMode) -> !found : 1
+* !controllerCfg.Features().Contains(feature.K8sOperators) -> ch.Meta().Deployment != nil && ch.Meta().Deployment.DeploymentMode == charm.ModeOperator : 1

@@ -1,0 +1,15 @@
+* r.features.Enabled(features.ExpandPersistentVolumes) -> attrs.IsResourceRequest() : 1
+* r.features.Enabled(features.TokenRequest) -> attrs.IsResourceRequest() : 1
+* r.features.Enabled(features.CSINodeInfo) -> attrs.IsResourceRequest() : 1
+* !utilfeature.DefaultFeatureGate.Enabled(features.VolumeSubpath) -> mount.SubPathExpr != "" : 1
+* !utilfeature.DefaultFeatureGate.Enabled(features.VolumeSubpath) -> subPath != "" : 1
+* utilfeature.DefaultFeatureGate.Enabled(features.LocalStorageCapacityIsolation) -> err != nil : 1
+* utilfeature.DefaultFeatureGate.Enabled(features.IPv6DualStack) -> allocatedIP != nil : 1
+* utilfeature.DefaultFeatureGate.Enabled(features.ServiceAccountIssuerDiscovery) -> s.ServiceAccounts != nil : 1
+* utilfeature.DefaultFeatureGate.Enabled(features.AnyVolumeDataSource) -> pvcSpec.DataSource != nil : 1
+* utilfeature.DefaultFeatureGate.Enabled(features.ExternalPolicyForExternalIP) -> err := proxier.syncService(svcNameString, serv, true, bindedAddresses) : 1
+* !utilfeature.DefaultFeatureGate.Enabled(kubefeatures.WinOverlay) -> hnsNetworkInfo.networkType == "Overlay" : 1
+* !(utilfeature.DefaultFeatureGate.Enabled(features.ExternalPolicyForExternalIP) && svcInfo.OnlyNodeLocalEndpoints()) -> hasEndpoints : 1
+* !utilfeature.DefaultFeatureGate.Enabled(features.IPv6DualStack) -> serviceCIDR != nil && secondaryServiceCIDR != nil : 1
+* utilfeature.DefaultFeatureGate.Enabled(features.IPv6DualStack) -> proxyMode == proxyModeIPTables : 1
+* utilfeature.DefaultFeatureGate.Enabled(features.IPv6DualStack) -> proxyMode == proxyModeIPVS : 1

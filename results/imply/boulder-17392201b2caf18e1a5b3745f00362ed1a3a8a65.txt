@@ -1,0 +1,4 @@
+* features.Enabled(features.NewAuthorizationSchema) -> limit.Enabled() : 1
+* features.Enabled(features.NewAuthorizationSchema) -> ra.reuseValidAuthz : 1
+* !features.Enabled(features.CheckRenewalFirst) -> len(badNames) > 0 : 1
+* features.Enabled(features.EnforceMultiVA) -> remoteProbs != nil : 1

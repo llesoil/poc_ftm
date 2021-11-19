@@ -1,0 +1,2 @@
+* featureflag.VPCSkipEnableDNSSupport.Enabled() -> changes != nil && changes.EnableDNSSupport != nil -> shared : 1
+* !featureflag.VSphereCloudProvider.Enabled() -> c.Cloud == "vsphere" -> c.Cloud != "" : 1

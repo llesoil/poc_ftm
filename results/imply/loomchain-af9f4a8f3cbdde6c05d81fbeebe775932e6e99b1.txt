@@ -1,0 +1,3 @@
+* ctx.FeatureEnabled(features.DPOSVersion2_1, false) -> statistic.WhitelistAmount != nil && !common.IsZero(statistic.WhitelistAmount.Value) : 1
+* ctx.FeatureEnabled(features.DPOSVersion3_3, false) -> statistic == nil : 1
+* !ctx.FeatureEnabled(features.DPOSVersion3_1, false) -> statistic == nil : 1
