@@ -6,7 +6,7 @@ This is the companion repository of our submission "On the Interaction of Featur
 
 Measurements and details about the performances can be consulted in the **data** folder.
 
-Source code can be found in the **src** directory.
+Source code can be consulted in the Main notebook and in the **others** directory.
 
 The **results** folder contains the results shown in the submission, as well as complementary results.
 
